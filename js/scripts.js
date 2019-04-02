@@ -3,7 +3,7 @@ $(document).ready(function(){
   $("form.wordPuzzle").submit(function(event){
     event.preventDefault();
     var string = $("input#string").val();
-    var array = string.split('');
+    var array = string.split("");
     console.log(array);
 
     for (var i = 0; i < array.length; i++) {
@@ -11,11 +11,12 @@ $(document).ready(function(){
         array[i] = '-';
 
         console.log(array);
+        // array.join();
       }
-      array.toString();
+
     }
 
-      $("#formOutput").text(array);
+      $("#formOutput").text(array.join(""));
 
 
 });
